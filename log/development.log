@@ -694,3 +694,13 @@ use the `skip_pipeline: true` option.
 Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.6ms | Allocations: 5173)
 
 
+Started GET "/images/thumb/default.gif" for 76.124.168.60 at 2020-12-11 20:54:46 +0000
+Cannot render console from 76.124.168.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/default.gif"):
+  
+Started GET "/system/songs/album_arts/000/000/003/thumb/homer.gif?1607720077" for 76.124.168.60 at 2020-12-11 20:54:46 +0000
+Cannot render console from 76.124.168.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/system/songs/album_arts/000/000/003/thumb/homer.gif"):
+  
