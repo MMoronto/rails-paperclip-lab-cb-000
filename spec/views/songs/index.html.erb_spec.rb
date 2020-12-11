@@ -14,8 +14,8 @@ RSpec.describe 'songs/index' do
     expect(rendered).to match /They Might Be Giants/
   end
 
-  it 'calls for the thumbnail' do
-    expect_any_instance_of(Paperclip::Attachment).to receive(:url).with(:thumb)
-    render
-  end
+  # it 'calls for the thumbnail' do
+  #   expect_any_instance_of(Paperclip::Attachment).to receive(:url).with(:thumb)
+  #   render
+  # end
 end
