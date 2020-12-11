@@ -814,3 +814,39 @@ Cannot render console from 76.124.168.60! Allowed networks: 127.0.0.1, ::1, 127.
   
 ActionController::RoutingError (No route matches [GET] "/system/songs/album_arts/000/000/003/thumb/homer.gif"):
   
+Started GET "/songs" for 76.124.168.60 at 2020-12-11 21:26:48 +0000
+Cannot render console from 76.124.168.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+DEPRECATION WARNING: The asset "thumb/default.png" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from block in _app_views_songs_index_html_erb___1602608510838660299_70301409109200 at /home/MMoronto/rails-paperclip-lab-cb-000/app/views/songs/index.html.erb:3)
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: The asset "thumb/default.png" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from block in _app_views_songs_index_html_erb___1602608510838660299_70301409109200 at /home/MMoronto/rails-paperclip-lab-cb-000/app/views/songs/index.html.erb:3)
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered songs/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1900)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4950)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.4ms | Allocations: 5191)
+
+
+Started GET "/images/thumb/default.png" for 76.124.168.60 at 2020-12-11 21:26:48 +0000
+Cannot render console from 76.124.168.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/default.png"):
+  
+Started GET "/system/songs/album_arts/000/000/003/thumb/homer.gif?1607720077" for 76.124.168.60 at 2020-12-11 21:26:48 +0000
+Cannot render console from 76.124.168.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/system/songs/album_arts/000/000/003/thumb/homer.gif"):
+  
