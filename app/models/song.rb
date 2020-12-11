@@ -1,7 +1,7 @@
 class Song < ActiveRecord::Base
   belongs_to :artist
 
-  has_attached_file :album_art, default_url: ':'
+  has_attached_file :album_art, default_url: ':style/homer.gif'
   validates_attachment_content_type :album_art, content_type: /\Aimage\/.*\Z/
 
   def artist_name
