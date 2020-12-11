@@ -17,5 +17,5 @@ RSpec.describe 'songs/index' do
   # it 'calls for the thumbnail' do
   #   expect_any_instance_of(Paperclip::Attachment).to receive(:url).with(:thumb)
   #   render
-  end
+  # end
 end
