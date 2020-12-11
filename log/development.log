@@ -593,3 +593,65 @@ Processing by ArtistsController#show as HTML
 Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 3734)
 
 
+Started GET "/songs" for 76.124.168.60 at 2020-12-11 20:53:56 +0000
+Cannot render console from 76.124.168.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering songs/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+DEPRECATION WARNING: The asset "thumb/default.gif" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from block in _app_views_songs_index_html_erb___1602608510838660299_70301418246020 at /home/MMoronto/rails-paperclip-lab-cb-000/app/views/songs/index.html.erb:3)
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: The asset "thumb/default.gif" is not present in the asset pipeline.
+Falling back to an asset that may be in the public folder.
+This behavior is deprecated and will be removed.
+To bypass the asset pipeline and preserve this behavior,
+use the `skip_pipeline: true` option.
+ (called from block in _app_views_songs_index_html_erb___1602608510838660299_70301418246020 at /home/MMoronto/rails-paperclip-lab-cb-000/app/views/songs/index.html.erb:3)
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered songs/index.html.erb within layouts/application (Duration: 16.8ms | Allocations: 9705)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 12864)
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 1.2ms | Allocations: 14624)
+
+
+Started GET "/images/thumb/default.gif" for 76.124.168.60 at 2020-12-11 20:53:57 +0000
+Cannot render console from 76.124.168.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/thumb/default.gif"):
+  
+Started GET "/songs/new" for 76.124.168.60 at 2020-12-11 20:54:00 +0000
+Cannot render console from 76.124.168.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering songs/new.html.erb within layouts/application
+  Rendered songs/_form.html.erb (Duration: 12.3ms | Allocations: 6686)
+  Rendered songs/new.html.erb within layouts/application (Duration: 13.2ms | Allocations: 6976)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 8549)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 8936)
+
+
+Started POST "/songs" for 76.124.168.60 at 2020-12-11 20:54:37 +0000
+Cannot render console from 76.124.168.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v2xq9Fxj1rk2toyUECBxABVeHawbvBJxXTQCWpVqRQ38ancOKoN2g5Gfyxw60wNr6GYKxCm+dWj0hPlWQUVxvg==", "song"=>{"album_art"=>#<ActionDispatch::Http::UploadedFile:0x00000000041b2d68 @tempfile=#<Tempfile:/tmp/RackMultipart20201211-14980-1a0s9c2.gif>, @original_filename="homer.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"song[album_art]\"; filename=\"homer.gif\"\r\nContent-Type: image/gif\r\n">, "title"=>"Hip Hop Hurray", "artist_name"=>"Naughty by Nature"}, "commit"=>"Create Song"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "Naughty by Nature"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArtist Create (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Naughty by Nature"], ["created_at", "2020-12-11 20:54:37.549007"], ["updated_at", "2020-12-11 20:54:37.549007"]]
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[36mcommit transaction[0m
+[paperclip] Trying to link /tmp/RackMultipart20201211-14980-1a0s9c2.gif to /tmp/dfa8327f5bfa4c672a04f9b38e348a7020201211-14980-113a8uo.gif
+[paperclip] Trying to link /tmp/dfa8327f5bfa4c672a04f9b38e348a7020201211-14980-113a8uo.gif to /tmp/dfa8327f5bfa4c672a04f9b38e348a7020201211-14980-6nq372.gif
+Command :: file -b --mime '/tmp/dfa8327f5bfa4c672a04f9b38e348a7020201211-14980-6nq372.gif'
+[paperclip] Trying to link /tmp/dfa8327f5bfa4c672a04f9b38e348a7020201211-14980-113a8uo.gif to /tmp/dfa8327f5bfa4c672a04f9b38e348a7020201211-14980-1hkf071.gif
+Command :: file -b --mime '/tmp/dfa8327f5bfa4c672a04f9b38e348a7020201211-14980-1hkf071.gif'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Create (0.7ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at", "artist_id", "album_art_file_name", "album_art_content_type", "album_art_file_size", "album_art_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Hip Hop Hurray"], ["created_at", "2020-12-11 20:54:37.574505"], ["updated_at", "2020-12-11 20:54:37.574505"], ["artist_id", 3], ["album_art_file_name", "homer.gif"], ["album_art_content_type", "image/gif"], ["album_art_file_size", 1845619], ["album_art_updated_at", "2020-12-11 20:54:37.556656"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://67.205.188.72:59801/songs/3
+Completed 302 Found in 43ms (ActiveRecord: 7.9ms | Allocations: 9169)
+
+
