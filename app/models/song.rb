@@ -1,6 +1,9 @@
 class Song < ActiveRecord::Base
   belongs_to :artist
 
+  has_attached_file :album_art
+  validates_attachment_content_type :album_art, content_type: /\Aimage\/.*\z/
+
   def artist_name
     self.try(:artist).try(:name)
   end
