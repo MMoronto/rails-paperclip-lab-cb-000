@@ -18,7 +18,7 @@ RSpec.describe Song, type: :model do
 
     it "has a default" do
       song = Song.first
-      expect(song.album_cover.url).to_not eq /missing.png/
+      expect(song.album_art.url).to_not eq /missing.png/
     end
   end
 
