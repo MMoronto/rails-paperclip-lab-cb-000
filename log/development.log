@@ -552,3 +552,44 @@ Migrating to AddAttachmentAlbumArtToSongs (20201211203504)
   [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 76.124.168.60 at 2020-12-11 20:47:36 +0000
+Cannot render console from 76.124.168.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.6.1/gems/railties-6.1.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/railties-6.1.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.2ms | Allocations: 414)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 2181)
+
+
+Started GET "/songs" for 76.124.168.60 at 2020-12-11 20:48:03 +0000
+Cannot render console from 76.124.168.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered songs/index.html.erb within layouts/application (Duration: 31.3ms | Allocations: 13372)
+  Rendered layout layouts/application.html.erb (Duration: 249.7ms | Allocations: 302996)
+Completed 200 OK in 259ms (Views: 249.2ms | ActiveRecord: 1.8ms | Allocations: 305755)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 76.124.168.60 at 2020-12-11 20:48:04 +0000
+Cannot render console from 76.124.168.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/album_arts/thumb/missing.png" for 76.124.168.60 at 2020-12-11 20:48:04 +0000
+Cannot render console from 76.124.168.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/album_arts/thumb/missing.png"):
+  
+Started GET "/artists/1" for 76.124.168.60 at 2020-12-11 20:48:14 +0000
+Cannot render console from 76.124.168.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 73)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 3159)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 3734)
+
+
